@@ -388,7 +388,7 @@ a {
 /* End-Animation */
 /* Mega-MENU */
 .header .container .main-nav>li>.mega-menu {
-    display: flex;
+    display: none;
     justify-content: space-between;
     border-bottom: 3px solid var(--main-color);
     align-items: center;
@@ -398,7 +398,6 @@ a {
     width: calc(100% - 90px);
     left: 45px;
     background-color: #fff;
-    display: none;
     top: calc(100% + 50px);
     z-index: -1;
     min-height: 50vh;
@@ -417,6 +416,11 @@ a {
         flex-direction: column;
         display: flex;
         gap: 0;
+    }
+}
+@media(min-width:992px){
+    .header .container .main-nav>li:hover .mega-menu {
+    display: flex;
     }
 }
 
