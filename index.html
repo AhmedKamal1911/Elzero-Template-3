@@ -17,6 +17,11 @@
 </head>
 
 <body>
+    <!-- To-up-button -->
+    <div class="up-button" onclick="topFunction()" id="to-top-button">
+            <i class="fas fa-angle-double-up"></i>
+    </div>
+    <!-- END-To-up-button -->
     <!-- Start-header -->
     <div class="header">
         <div class="container">
@@ -922,6 +927,23 @@
         <p>Made With <3 By Elzero</p>
     </div>
     <!-- end-footer -->
+    <script>
+        let mybutton = document.getElementById("to-top-button");
+        window.onscroll = function(){scrollFunction()};
+        function scrollFunction() {
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+            {
+                mybutton.style.display= "flex";
+            }
+            else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>

@@ -6,7 +6,42 @@
     --main-padding: 100px;
     --background-section: #ececec;
 }
-
+/* up-button */
+.up-button{
+    width: 35px;
+    height: 50px;
+    border: 1px solid var(--main-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 25px;
+    position: fixed;
+    z-index: 999;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    animation: to-up alternate-reverse 1.5s infinite;
+    transition: var(--main-transition);
+}
+.up-button:hover{
+    background-color: whitesmoke;
+    animation-play-state: paused;
+    border-color: #009688;
+}
+@keyframes to-up{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+.up-button i{
+    font-size: 19px;
+    color: var(--main-color);
+}
+/* End-up-button */
 /* main-Head */
 .main-heading {
     text-align: center;
